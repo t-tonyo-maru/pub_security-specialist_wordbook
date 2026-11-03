@@ -1971,6 +1971,18 @@
     "term": "IRM（Information Rights Management）",
     "desc": "文書ファイル自体を暗号化し、閲覧・編集・印刷・コピー・転送などの操作権限を利用者ごとに設定して、ファイルが組織の外に持ち出された後も利用を制御する仕組み。ファイルを開くたびに権限管理サーバで認証と権限の確認を行うため、誤送信や持ち出しによる情報漏えいの被害を抑えられ、有効期限の設定や配布後の権限剥奪、操作ログの取得もできる。代表例はMicrosoft Purview Information Protection（旧Azure RMS）。著作物を対象とする同様の技術はDRM（Digital Rights Management）と呼ばれる。",
     "source": "教材外（追加）"
+   },
+   {
+    "id": "追加#LDAP",
+    "term": "LDAP（Lightweight Directory Access Protocol）",
+    "desc": "ディレクトリサービスに格納されたユーザ・グループ・機器などの情報を参照・更新するためのプロトコル（389番ポート、LDAPS・StartTLSでは暗号化、LDAPSは636番ポート）。認証情報の一元管理や、アプリケーションからの利用者認証・属性取得に使われる。平文のLDAPではバインド時のパスワードが盗聴されるため、TLSによる保護が必要。検索フィルタに入力値を埋め込む実装では、LDAPインジェクションによる認証回避や情報漏えいの恐れがあり、特殊文字のエスケープで対策する。",
+    "source": "教材外（追加）"
+   },
+   {
+    "id": "追加#Active Directory",
+    "term": "Active Directory（AD）",
+    "desc": "Microsoftが提供するディレクトリサービス。ドメイン内のユーザ、グループ、コンピュータなどをドメインコントローラ（DC）で一元管理し、Kerberos認証やLDAPによる問い合わせ、グループポリシー（GPO）による端末設定の配布を提供する。Windowsドメイン環境のSSOの基盤となる一方、侵入後の権限昇格や横展開の標的になりやすく、Golden Ticket攻撃、Pass the Hash、Kerberoastingなどが知られる。特権アカウントの管理分離や階層化（ティアモデル）が対策となる。",
+    "source": "教材外（追加）"
    }
   ]
  },
